@@ -190,14 +190,14 @@ For example:
         and generalize to the temperature-dependent posterior $p_\beta$:
 
         $$
-         p_{\beta(\thetavec|D,I)} \propto p(D,\thetavec,I)^\beta
+         p_{\beta(\thetavec|D,I)} \propto p(D|\thetavec,I)^\beta
             p(\thetavec|I) \qquad 0 \leq \beta \leq 1
         $$
 
         or
 
         $$
-          \log p_{\beta(\thetavec|D,I)} = C + \beta\log p(D,\thetavec,I) + \log p(\thetavec|I) .
+          \log p_{\beta(\thetavec|D,I)} = C + \beta\log p(D|\thetavec,I) + \log p(\thetavec|I) .
         $$  
 
         So the desired distribution is $\beta = 1$, and $\beta = 0$ is the prior alone.
@@ -222,14 +222,28 @@ For example:
     $$
 
     * This will preserve detailed balance.
+    * We can make this expression more intuitive if we connect back to the physics analogy.
+
+        $$
+          p_\beta(\thetavec|D,I) \propto p(D|\thetavec,I)^\beta p(\thetavec|I)
+          \propto e^{-\beta(-\log p(D|\thetavec,I)) p(\thetavec|I)}
+        $$
+
+        and $-\log p(D|\thetavec,I)$ is the potential energy $U(\rvec)$ (by analogy). Then the priors drop out of the ratio in $r$ (the prior is independent of $\beta$), leaving:
+
+        $$
+        r = \min\left\{1,e^{-(\beta_i - \beta_{i+1})(U(\rvec_{i+1}-U(\rvec_i)))}\right\}
+        $$
  
+        so the four terms in $r$ arise from the Boltzman factors of the energy difference at the two temperatures.
+
 * Things to specify for the sampler:
     * $n_s$: propose a swap every $n_s$ iterations, which is implemented by drawing a random number $U_1 \sim \text{Uniform}[0,1]$ every iteration and proposing a swap if $U_1 \leq 1/n_s$.
     * The length and spacing of the temperature ladder.
 
 ### Calculating the evidence
 
-To calculate the *evidence* from parallel tempering, we can use *thermodynamic integration* [see Goggans and Chi, AIP Conf. Proc. **707**, 59 (2004)].
+To calculate the *evidence* from parallel tempering, we can use *thermodynamic integration* see [Goggans and Chi, AIP Conf. Proc. **707**, 59 (2004)](https://aip.scitation.org/doi/abs/10.1063/1.1751356).
 
 * Define the temperature dependent evidence:
 
@@ -254,10 +268,11 @@ To calculate the *evidence* from parallel tempering, we can use *thermodynamic i
 * So we can integrate over $\beta$ (the first term is doesn't contribute if the prior is normalized):
 
     $$
-      \log Z(1) = \log Z(0) + \int_0^1 d\beta, \langle \log p(D|\thetavec,I)\rangle_\beta ,
+      \log Z(1) = \log Z(0) + \int_0^1 d\beta\, \langle \log p(D|\thetavec,I)\rangle_\beta ,
     $$
 
     $\Lra$ estimate from emcee samples by computing the average of $p(D|\thetavec,I)$ within each chain and then evaluating the integral from a quadrature formula (e.g., Simpson's rule).
+
 
 
 ### Example of parallel tempering       
@@ -274,3 +289,4 @@ Comments:
 * The setup for `ptemcee` includes a temperature grid chosen so that numerically integrating over temperature for the evidence has a finer grid at low temperatures for greater accuracy.
 
 * Note the corner plots for different temperatures and how the multimodal structure emerges. 
+

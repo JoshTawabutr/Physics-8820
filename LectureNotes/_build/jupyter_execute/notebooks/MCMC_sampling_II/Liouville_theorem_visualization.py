@@ -269,7 +269,7 @@ for phi_0, p_phi_0 in out:
     all_orbits.append([phi, p_phi])
         
 for i in np.arange(num_t):
-    ax_c = fig.add_subplot(num_t/3, 3, i+1)
+    ax_c = fig.add_subplot(int(num_t/3), 3, i+1)
     ax_c.set_title(rf'$t = {t_pts[i]:.1f}$')
     for j in np.arange(num_samples):
         phi_now, p_phi_now = all_orbits[j]

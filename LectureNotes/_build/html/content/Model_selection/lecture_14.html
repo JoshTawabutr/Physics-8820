@@ -50,7 +50,7 @@
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": ["\\mathbb{N}"], "Z": ["\\mathbb{Z}"], "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "muvec": ["\\boldsymbol{\\mu}"], "phivec": ["\\boldsymbol{\\phi}"], "sigmavec": ["\\boldsymbol{\\sigma}"], "Sigmavec": ["\\boldsymbol{\\Sigma}"], "thetavec": ["\\boldsymbol{\\theta}"], "thetavechat": ["\\widehat\\thetavec"], "avec": ["\\boldsymbol{a}"], "Bvec": ["\\boldsymbol{B}"], "xvec": ["\\boldsymbol{x}"], "yvec": ["\\boldsymbol{y}"], "Lra": ["\\Longrightarrow"], "abar": ["\\overline a"], "Xbar": ["\\overline X"], "alphahat": ["\\widehat\\alpha"], "Hhat": ["\\hat H"], "yth": ["y_{\\text{th}}"], "yexp": ["y_{\\text{exp}}"], "ym": ["y_{\\text{m}}"]}}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": ["\\mathbb{N}"], "Z": ["\\mathbb{Z}"], "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "alphavec": ["\\boldsymbol{\\alpha}"], "muvec": ["\\boldsymbol{\\mu}"], "phivec": ["\\boldsymbol{\\phi}"], "sigmavec": ["\\boldsymbol{\\sigma}"], "Sigmavec": ["\\boldsymbol{\\Sigma}"], "thetavec": ["\\boldsymbol{\\theta}"], "thetavechat": ["\\widehat\\thetavec"], "avec": ["\\boldsymbol{a}"], "Bvec": ["\\boldsymbol{B}"], "rvec": ["\\boldsymbol{r}"], "xvec": ["\\boldsymbol{x}"], "yvec": ["\\boldsymbol{y}"], "Lra": ["\\Longrightarrow"], "abar": ["\\overline a"], "Xbar": ["\\overline X"], "alphahat": ["\\widehat\\alpha"], "Hhat": ["\\hat H"], "yth": ["y_{\\text{th}}"], "yexp": ["y_{\\text{exp}}"], "ym": ["y_{\\text{m}}"]}}})</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -392,23 +392,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../notebooks/MCMC_sampling_II/chi_squared_tests.html">
+     6.2. Quick check of the distribution of normal variables squared
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../notebooks/MCMC_sampling_II/Liouville_theorem_visualization.html">
-     6.2. Liouville Theorem Visualization
+     6.3. Liouville Theorem Visualization
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../notebooks/MCMC_sampling_II/Orbital_eqs_with_different_algorithms.html">
-     6.3. Solving orbital equations with different algorithms
+     6.4. Solving orbital equations with different algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notebooks/MCMC_sampling_II/PyMC3_intro.html">
-     6.5. PyMC3 Introduction
+    <a class="reference internal" href="../MCMC_sampling_II/lecture_18.html">
+     6.6. Lecture 18
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notebooks/MCMC_sampling_II/PyMC3_docs_getting_started.html">
-     6.6. Getting started with PyMC3
+    <a class="reference internal" href="../../notebooks/MCMC_sampling_II/PyMC3_intro_updated.html">
+     6.7. PyMC3 Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../notebooks/MCMC_sampling_II/PyMC3_docs_getting_started_updated.html">
+     6.8. Getting started with PyMC3
     </a>
    </li>
   </ul>
@@ -424,18 +434,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Gaussian_processes/lecture_19.html">
+     7.1. Lecture 19
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../notebooks/Gaussian_processes/demo-GaussianProcesses.html">
-     7.1. Gaussian processes demonstration
+     7.2. Gaussian processes demonstration
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../notebooks/Gaussian_processes/GaussianProcesses.html">
-     7.2. Learning from data: Gaussian processes
+     7.3. Learning from data: Gaussian processes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../notebooks/Gaussian_processes/Gaussian_processes_exercises.html">
-     7.3. Exercise: Gaussian Process models with GPy
+     7.4. Exercise: Gaussian Process models with GPy
     </a>
    </li>
   </ul>
@@ -535,7 +550,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../notebooks/mini-projects/model-selection_mini-project-IIb_How_many_lines_ptemcee.html">
-   Mini-project IIb: How many lines are there
+   Mini-project IIb: How many lines are there?
   </a>
  </li>
 </ul>
@@ -941,7 +956,7 @@ This serves to penalize <span class="math notranslate nohighlight">\(B\)</span> 
 </div>
 <div class="section" id="evidence-calculations-laplaces-method">
 <h2>Evidence calculations: Laplace’s method<a class="headerlink" href="#evidence-calculations-laplaces-method" title="Permalink to this headline">¶</a></h2>
-<p>Suppose an unnormalized probability density <span class="math notranslate nohighlight">\(P^*(\thetavec)\)</span> has a peak at <span class="math notranslate nohighlight">\(\thetavec_0\)</span>.</p>
+<p>Suppose an unnormalized probability density <span class="math notranslate nohighlight">\(P^*(\thetavec)\)</span> has a peak at <span class="math notranslate nohighlight">\(\thetavec_0\)</span> (the <span class="math notranslate nohighlight">\(*\)</span> indicates it is unnormalized).</p>
 <ul>
 <li><p>Let <span class="math notranslate nohighlight">\(\thetavec\)</span> be <span class="math notranslate nohighlight">\(K\)</span> dimensional. Then the evidence is</p>
 <div class="math notranslate nohighlight">
@@ -961,27 +976,30 @@ This serves to penalize <span class="math notranslate nohighlight">\(B\)</span> 
 \[
        H_{ij} = -\left.\frac{\partial^2}{\partial\theta_i\partial\theta_j}\log P^*(\thetavec)\right|_{\thetavec=\thetavec_0} .
     \]</div>
+<p>This is a saddlepoint approximation.</p>
 </li>
-<li><p>Then we can truncate at this level to approximate the full series with the quadratic term:</p>
+<li><p>Then we can truncate at this level to approximate the full series with the quadratic term (denoted by <span class="math notranslate nohighlight">\(Q\)</span>):</p>
 <div class="math notranslate nohighlight">
 \[
       Q^*(\thetavec) \equiv P^*(\thetavec_0) e^{\frac{1}{2}(\thetavec-\thetavec_0)^\intercal \Sigma^{-1} (\thetavec-\thetavec_0)}
     \]</div>
-<p>and approximate</p>
+<p>and approximate <span class="math notranslate nohighlight">\(Z_P\)</span> by Gaussian integration:</p>
 <div class="math notranslate nohighlight">
 \[
-      Z_P \approx Z_Q - P^*(\thetavec_0)
+      Z_P \approx Z_Q = P^*(\thetavec_0)
         \sqrt{\frac{(2\pi)^K}{\det(\Sigma^{-1})}} .
     \]</div>
 </li>
-<li><p>If <span class="math notranslate nohighlight">\(P^*(\thetavec) = e^{-\frac{1}{2}\chi^2(\thetavec)}\)</span> then</p>
+<li><p>If <span class="math notranslate nohighlight">\(P^*(\thetavec) = e^{-\frac{1}{2}\chi^2(\thetavec)}\)</span> (so the prior is uniform) then</p>
 <div class="math notranslate nohighlight">
 \[
      Z_P \approx e^{-\frac{1}{2}\chi^2(\thetavec_0)}
-        \sqrt{\frac{(4\pi)^K}{\det(\Sigma^{-1})}}   .  
+        \sqrt{\frac{(4\pi)^K}{\det(\Sigma^{-1})}}   ,  
     \]</div>
+<p>where the extra factor of 2 in the square root is from the 1/2 in <span class="math notranslate nohighlight">\(\chi^2/2\)</span>.</p>
 </li>
 </ul>
+<p>Other approaches for the Bayes factor are discussed in <a class="reference external" href="https://michael-franke.github.io/statistics,/modeling/2017/07/07/BF_computation.html"><em>Computing Bayes Factors</em></a>.</p>
 </div>
 <div class="section" id="preview-of-mini-project-iia-on-model-selection">
 <h2>Preview of mini-project IIa on model selection<a class="headerlink" href="#preview-of-mini-project-iia-on-model-selection" title="Permalink to this headline">¶</a></h2>

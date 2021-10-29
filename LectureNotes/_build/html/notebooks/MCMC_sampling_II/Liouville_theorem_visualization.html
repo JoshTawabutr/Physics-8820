@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.2. Liouville Theorem Visualization &#8212; Learning from data</title>
+    <title>6.3. Liouville Theorem Visualization &#8212; Learning from data</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,13 +50,13 @@
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": ["\\mathbb{N}"], "Z": ["\\mathbb{Z}"], "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "muvec": ["\\boldsymbol{\\mu}"], "phivec": ["\\boldsymbol{\\phi}"], "sigmavec": ["\\boldsymbol{\\sigma}"], "Sigmavec": ["\\boldsymbol{\\Sigma}"], "thetavec": ["\\boldsymbol{\\theta}"], "thetavechat": ["\\widehat\\thetavec"], "avec": ["\\boldsymbol{a}"], "Bvec": ["\\boldsymbol{B}"], "xvec": ["\\boldsymbol{x}"], "yvec": ["\\boldsymbol{y}"], "Lra": ["\\Longrightarrow"], "abar": ["\\overline a"], "Xbar": ["\\overline X"], "alphahat": ["\\widehat\\alpha"], "Hhat": ["\\hat H"], "yth": ["y_{\\text{th}}"], "yexp": ["y_{\\text{exp}}"], "ym": ["y_{\\text{m}}"]}}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": ["\\mathbb{N}"], "Z": ["\\mathbb{Z}"], "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "alphavec": ["\\boldsymbol{\\alpha}"], "muvec": ["\\boldsymbol{\\mu}"], "phivec": ["\\boldsymbol{\\phi}"], "sigmavec": ["\\boldsymbol{\\sigma}"], "Sigmavec": ["\\boldsymbol{\\Sigma}"], "thetavec": ["\\boldsymbol{\\theta}"], "thetavechat": ["\\widehat\\thetavec"], "avec": ["\\boldsymbol{a}"], "Bvec": ["\\boldsymbol{B}"], "rvec": ["\\boldsymbol{r}"], "xvec": ["\\boldsymbol{x}"], "yvec": ["\\boldsymbol{y}"], "Lra": ["\\Longrightarrow"], "abar": ["\\overline a"], "Xbar": ["\\overline X"], "alphahat": ["\\widehat\\alpha"], "Hhat": ["\\hat H"], "yth": ["y_{\\text{th}}"], "yexp": ["y_{\\text{exp}}"], "ym": ["y_{\\text{m}}"]}}})</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.3. Solving orbital equations with different algorithms" href="Orbital_eqs_with_different_algorithms.html" />
-    <link rel="prev" title="6.1. Lecture 17" href="../../content/MCMC_sampling_II/lecture_17.html" />
+    <link rel="next" title="6.4. Solving orbital equations with different algorithms" href="Orbital_eqs_with_different_algorithms.html" />
+    <link rel="prev" title="6.2. Quick check of the distribution of normal variables squared" href="chi_squared_tests.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -391,24 +391,34 @@
      6.1. Lecture 17
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chi_squared_tests.html">
+     6.2. Quick check of the distribution of normal variables squared
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6.2. Liouville Theorem Visualization
+     6.3. Liouville Theorem Visualization
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Orbital_eqs_with_different_algorithms.html">
-     6.3. Solving orbital equations with different algorithms
+     6.4. Solving orbital equations with different algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="PyMC3_intro.html">
-     6.5. PyMC3 Introduction
+    <a class="reference internal" href="../../content/MCMC_sampling_II/lecture_18.html">
+     6.6. Lecture 18
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="PyMC3_docs_getting_started.html">
-     6.6. Getting started with PyMC3
+    <a class="reference internal" href="PyMC3_intro_updated.html">
+     6.7. PyMC3 Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="PyMC3_docs_getting_started_updated.html">
+     6.8. Getting started with PyMC3
     </a>
    </li>
   </ul>
@@ -424,18 +434,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../content/Gaussian_processes/lecture_19.html">
+     7.1. Lecture 19
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Gaussian_processes/demo-GaussianProcesses.html">
-     7.1. Gaussian processes demonstration
+     7.2. Gaussian processes demonstration
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Gaussian_processes/GaussianProcesses.html">
-     7.2. Learning from data: Gaussian processes
+     7.3. Learning from data: Gaussian processes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Gaussian_processes/Gaussian_processes_exercises.html">
-     7.3. Exercise: Gaussian Process models with GPy
+     7.4. Exercise: Gaussian Process models with GPy
     </a>
    </li>
   </ul>
@@ -535,7 +550,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../mini-projects/model-selection_mini-project-IIb_How_many_lines_ptemcee.html">
-   Mini-project IIb: How many lines are there
+   Mini-project IIb: How many lines are there?
   </a>
  </li>
 </ul>
@@ -752,7 +767,7 @@
               <div>
                 
   <div class="section" id="liouville-theorem-visualization">
-<h1><span class="section-number">6.2. </span>Liouville Theorem Visualization<a class="headerlink" href="#liouville-theorem-visualization" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6.3. </span>Liouville Theorem Visualization<a class="headerlink" href="#liouville-theorem-visualization" title="Permalink to this headline">¶</a></h1>
 <p>HamiltonianPendulum class to generate basic pendulum plots, applied to problems from Taylor, but now solving using Hamilton’s equations.</p>
 <ul class="simple">
 <li><p>Last revised 16-Mar-2019 by Dick Furnstahl (<a class="reference external" href="mailto:furnstahl&#46;1&#37;&#52;&#48;osu&#46;edu">furnstahl<span>&#46;</span>1<span>&#64;</span>osu<span>&#46;</span>edu</a>).</p></li>
@@ -1018,7 +1033,7 @@ Constructing the Hamiltonian by Legendre transformation we find</p>
     <span class="n">all_orbits</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">phi</span><span class="p">,</span> <span class="n">p_phi</span><span class="p">])</span>
         
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_t</span><span class="p">):</span>
-    <span class="n">ax_c</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">num_t</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax_c</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num_t</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">ax_c</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;$t = </span><span class="si">{</span><span class="n">t_pts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_samples</span><span class="p">):</span>
         <span class="n">phi_now</span><span class="p">,</span> <span class="n">p_phi_now</span> <span class="o">=</span> <span class="n">all_orbits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
@@ -1065,8 +1080,8 @@ Constructing the Hamiltonian by Legendre transformation we find</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../../content/MCMC_sampling_II/lecture_17.html" title="previous page"><span class="section-number">6.1. </span>Lecture 17</a>
-    <a class='right-next' id="next-link" href="Orbital_eqs_with_different_algorithms.html" title="next page"><span class="section-number">6.3. </span>Solving orbital equations with different algorithms</a>
+    <a class='left-prev' id="prev-link" href="chi_squared_tests.html" title="previous page"><span class="section-number">6.2. </span>Quick check of the distribution of normal variables squared</a>
+    <a class='right-next' id="next-link" href="Orbital_eqs_with_different_algorithms.html" title="next page"><span class="section-number">6.4. </span>Solving orbital equations with different algorithms</a>
 
         </div>
         

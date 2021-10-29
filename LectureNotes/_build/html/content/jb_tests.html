@@ -50,7 +50,7 @@
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": ["\\mathbb{N}"], "Z": ["\\mathbb{Z}"], "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "muvec": ["\\boldsymbol{\\mu}"], "phivec": ["\\boldsymbol{\\phi}"], "sigmavec": ["\\boldsymbol{\\sigma}"], "Sigmavec": ["\\boldsymbol{\\Sigma}"], "thetavec": ["\\boldsymbol{\\theta}"], "thetavechat": ["\\widehat\\thetavec"], "avec": ["\\boldsymbol{a}"], "Bvec": ["\\boldsymbol{B}"], "xvec": ["\\boldsymbol{x}"], "yvec": ["\\boldsymbol{y}"], "Lra": ["\\Longrightarrow"], "abar": ["\\overline a"], "Xbar": ["\\overline X"], "alphahat": ["\\widehat\\alpha"], "Hhat": ["\\hat H"], "yth": ["y_{\\text{th}}"], "yexp": ["y_{\\text{exp}}"], "ym": ["y_{\\text{m}}"]}}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": ["\\mathbb{N}"], "Z": ["\\mathbb{Z}"], "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "alphavec": ["\\boldsymbol{\\alpha}"], "muvec": ["\\boldsymbol{\\mu}"], "phivec": ["\\boldsymbol{\\phi}"], "sigmavec": ["\\boldsymbol{\\sigma}"], "Sigmavec": ["\\boldsymbol{\\Sigma}"], "thetavec": ["\\boldsymbol{\\theta}"], "thetavechat": ["\\widehat\\thetavec"], "avec": ["\\boldsymbol{a}"], "Bvec": ["\\boldsymbol{B}"], "rvec": ["\\boldsymbol{r}"], "xvec": ["\\boldsymbol{x}"], "yvec": ["\\boldsymbol{y}"], "Lra": ["\\Longrightarrow"], "abar": ["\\overline a"], "Xbar": ["\\overline X"], "alphahat": ["\\widehat\\alpha"], "Hhat": ["\\hat H"], "yth": ["y_{\\text{th}}"], "yexp": ["y_{\\text{exp}}"], "ym": ["y_{\\text{m}}"]}}})</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -392,23 +392,33 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/MCMC_sampling_II/chi_squared_tests.html">
+     6.2. Quick check of the distribution of normal variables squared
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../notebooks/MCMC_sampling_II/Liouville_theorem_visualization.html">
-     6.2. Liouville Theorem Visualization
+     6.3. Liouville Theorem Visualization
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../notebooks/MCMC_sampling_II/Orbital_eqs_with_different_algorithms.html">
-     6.3. Solving orbital equations with different algorithms
+     6.4. Solving orbital equations with different algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../notebooks/MCMC_sampling_II/PyMC3_intro.html">
-     6.5. PyMC3 Introduction
+    <a class="reference internal" href="MCMC_sampling_II/lecture_18.html">
+     6.6. Lecture 18
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../notebooks/MCMC_sampling_II/PyMC3_docs_getting_started.html">
-     6.6. Getting started with PyMC3
+    <a class="reference internal" href="../notebooks/MCMC_sampling_II/PyMC3_intro_updated.html">
+     6.7. PyMC3 Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/MCMC_sampling_II/PyMC3_docs_getting_started_updated.html">
+     6.8. Getting started with PyMC3
     </a>
    </li>
   </ul>
@@ -424,18 +434,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="Gaussian_processes/lecture_19.html">
+     7.1. Lecture 19
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../notebooks/Gaussian_processes/demo-GaussianProcesses.html">
-     7.1. Gaussian processes demonstration
+     7.2. Gaussian processes demonstration
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../notebooks/Gaussian_processes/GaussianProcesses.html">
-     7.2. Learning from data: Gaussian processes
+     7.3. Learning from data: Gaussian processes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../notebooks/Gaussian_processes/Gaussian_processes_exercises.html">
-     7.3. Exercise: Gaussian Process models with GPy
+     7.4. Exercise: Gaussian Process models with GPy
     </a>
    </li>
   </ul>
@@ -535,7 +550,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../notebooks/mini-projects/model-selection_mini-project-IIb_How_many_lines_ptemcee.html">
-   Mini-project IIb: How many lines are there
+   Mini-project IIb: How many lines are there?
   </a>
  </li>
 </ul>
@@ -904,8 +919,8 @@
 <p>Let’s try again here.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
-<div class="amsmath math notranslate nohighlight" id="equation-97b6b512-bb19-4330-b2a3-ec6303be2ab2">
-<span class="eqno">(1)<a class="headerlink" href="#equation-97b6b512-bb19-4330-b2a3-ec6303be2ab2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-959a75de-d60f-4197-b1ef-499271d0b8c4">
+<span class="eqno">(1)<a class="headerlink" href="#equation-959a75de-d60f-4197-b1ef-499271d0b8c4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
   \mbox{Second answer is:}\quad  a_{ij} b_{j} = c_{i}
 \end{equation}\]</div>
 </div>
@@ -1032,13 +1047,13 @@ $p(x) = \delta(x-x_0)\quad$  [Note that $p(x)$ is normalized.]
 <div class="section" id="tabbed-content">
 <h2>Tabbed content<a class="headerlink" href="#tabbed-content" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="04781447-9899-44cd-9b19-803c162b9b01" name="6fe5a4aa-81ed-4fa4-90d4-4e6b656ab26b" type="radio">
-</input><label class="tabbed-label" for="04781447-9899-44cd-9b19-803c162b9b01">
+<input checked="checked" id="99edc0ac-9c81-4312-8de2-67317fd01d09" name="3ea32af2-b107-41f1-8850-6c2849bc8593" type="radio">
+</input><label class="tabbed-label" for="99edc0ac-9c81-4312-8de2-67317fd01d09">
 Tab 1 title</label><div class="tabbed-content docutils">
 <p>My first tab</p>
 </div>
-<input id="e828bd37-de61-4256-abaa-ab03880a12d7" name="6fe5a4aa-81ed-4fa4-90d4-4e6b656ab26b" type="radio">
-</input><label class="tabbed-label" for="e828bd37-de61-4256-abaa-ab03880a12d7">
+<input id="a15a7472-2276-45b5-ab0d-c5aaffc1aa5f" name="3ea32af2-b107-41f1-8850-6c2849bc8593" type="radio">
+</input><label class="tabbed-label" for="a15a7472-2276-45b5-ab0d-c5aaffc1aa5f">
 Tab 2 title</label><div class="tabbed-content docutils">
 <p>My second tab with <code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">code</span></code>!</p>
 </div>
